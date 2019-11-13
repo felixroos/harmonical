@@ -314,7 +314,7 @@ those are all C major chords that can be sung by a female choir.
 
 ### options.ignoreLowerIntervalLimits
 
-By default, all voicings respect the common lowInterval limits, see [default options](lib/voicingDefaultOptions.ts). If you dont want that, you can set `ignoreLowerIntervalLimits` to true.
+By default, all voicings respect the common lowInterval limits, see [default options](lib/defaultOptions.ts). If you dont want that, you can set `ignoreLowerIntervalLimits` to true.
 
 ## Voicing.allocations
 
