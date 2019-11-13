@@ -1,0 +1,48 @@
+{
+  "name": "harmonical",
+  "version": "0.1.0",
+  "description": "Musical harmony lib. For voicings and chord progressions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "demo": "parcel demo/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixroos/harmonical.git"
+  },
+  "author": "Felix Roos <flix91@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixroos/harmonical/issues"
+  },
+  "homepage": "https://github.com/felixroos/harmonical#readme",
+  "dependencies": {
+    "tonal": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.9.0",
+    "parcel": "^1.12.4",
+    "svg-piano": "^0.2.0",
+    "tone": "^13.8.25",
+    "ts-jest": "^24.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "collectCoverage": false,
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+<html>
+  <head>
+    <title>Voicing Permutator</title>
+    <style>
+      * {
+        font-family: monospace;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      input {
+        width: 90px;
+      }
+      .container {
+        width: 600px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Voicing Permutator</h2>
+      <p>Enter a chord symbol to see all voicings that match the rules:</p>
+      <!-- <label> <input type="text" id="chord" /> Chord </label><br /> -->
+      <label>
+        <select id="chordRoot">
+          <option>C</option>
+          <option>C#</option>
+          <option>Db</option>
+          <option selected>D</option>
+          <option>D#</option>
+          <option>Eb</option>
+          <option>E</option>
+          <option>F</option>
+          <option>F#</option>
+          <option>Gb</option>
+          <option>G</option>
+          <option>G#</option>
+          <option>Ab</option>
+          <option>A</option>
+          <option>A#</option>
+          <option>Bb</option>
+          <option>B</option>
+        </select>
+        <select id="chordType">
+          <option>^</option>
+          <option>sus4</option>
+          <option>sus2</option>
+          <option>2</option>
+          <option>^#5</option>
+          <!-- <option>+</option> -->
+          <option>6</option>
+          <!-- <option>M69</option> -->
+          <option>^7</option>
+          <option>^7#5</option>
+          <option>^7#11</option>
+          <option>^9</option>
+          <option>^9#11</option>
+          <option>^13</option>
+          <option>7</option>
+          <option>7sus4</option>
+          <option>7sus</option>
+          <option>7b5</option>
+          <option>7#5</option>
+          <option>7+</option>
+          <option>7#9</option>
+          <option>7b9</option>
+          <option>7#11</option>
+          <option>7b13</option>
+          <option>7b9b5</option>
+          <option>7b9sus</option>
+          <option>7b9#5</option>
+          <option>7#9b5</option>
+          <option>7b9#9</option>
+          <option>7#9#5</option>
+          <option>7b9b13</option>
+          <option>7b9#11</option>
+          <option>7#9#11</option>
+          <option>9</option>
+          <option>9sus</option>
+          <option>9#5</option>
+          <option>9b5</option>
+          <option>9#11</option>
+          <option>13</option>
+          <option>13sus</option>
+          <option>13#9</option>
+          <option>13b9</option>
+          <option>13#11</option>
+          <option>11</option>
+          <option>-</option>
+          <option>-6</option>
+          <!-- <option>-69</option> -->
+          <option>-#5</option>
+          <option>-b6</option>
+          <option>-7</option>
+          <option>-^7</option>
+          <option selected>-9</option>
+          <option>-^9</option>
+          <option>-11</option>
+          <option>h</option>
+          <option>h7</option>
+          <option>-7b5</option>
+          <option>o</option>
+          <option>o7</option>
+          <!-- <option>69</option> -->
+        </select> </label
+      ><br />
+      <!-- <label
+      >minNotes
+      <input type="number" id="minNotes" />
+    </label> -->
+      <!-- <label title="maximum number of voices">
+        <input type="number" id="maxVoices" min="1" max="7" />
+        maxVoices</label
+      ><br /> -->
+      <label title="minimum number of notes">
+        <input type="number" id="minNotes" min="1" max="8" /> -
+        <input type="number" id="maxNotes" min="1" max="8" />
+        notes</label
+      ><br />
+      <label
+        title="min-max distances between the notes in semitones from the bottom up. all remaining will default to minDistance-maxDistance"
+      >
+        <input type="text" id="bottomDistances" />
+        bottomDistances (min0-max0 min1-max1 ...) </label
+      ><br />
+      <label
+        title="default min-max distance between notes. in semitones. can be overridden by bottomDistances / topDistances"
+      >
+        <input type="text" id="defaultDistances" /> defaultDistances (min-max
+        semitones)</label
+      ><br />
+      <label
+        title="min-max distances between the notes in semitones to the top. all remaining will default to minDistance-maxDistance"
+      >
+        <input type="text" id="topDistances" />
+        topDistance(s) (... minTop-maxTop) </label
+      ><br />
+
+      <!-- <label
+        title="minimum distance between the two bottom notes. in semitones"
+      >
+        <input type="number" id="minBottomDistance" min="1" max="24" />
+        minBottomDistance (semitones) </label
+      ><br />
+      <label
+        title="maximum distance between the bottom two notes. in semitones"
+      >
+        <input type="number" id="maxBottomDistance" min="0" max="24" />
+        maxBottomDistance (semitones) </label
+      ><br />
+      <label title="minimum distance between the top two notes. in semitones">
+        <input type="number" id="minTopDistance" min="1" max="11" />
+        minTopDistance (semitones) </label
+      ><br />
+      <label title="maximum distance between the top two notes. in semitones">
+        <input type="number" id="maxTopDistance" min="1" max="11" />
+        maxTopDistance (semitones) </label
+      ><br /> -->
+
+      <label
+        title="all degree options for the bottom note. number(s, space seperated)"
+      >
+        <input type="text" id="bottomDegrees" /> bottomDegree(s) (1-7)</label
+      ><br />
+      <label
+        title="all degree options for the top note. number(s, space seperated)"
+      >
+        <input type="text" id="topDegrees" /> topDegree(s) (1-7)</label
+      ><br /><!-- 
+      <label
+        title="all pitch options for the bottom note. pitch(es, space seperated)"
+      >
+        <input type="text" id="bottomPitches" /> bottomPitches(s)</label
+      ><br />
+      <label
+        title="all pitch options for the top note. pitch(es, space seperated)"
+      >
+        <input type="text" id="topPitches" /> topPitches(s)</label
+      ><br /> -->
+      <label
+        title="time between each note in ms. choose 0 to play all at once."
+      >
+        <input type="number" id="arpeggioInterval" min="0" max="1000" />
+        arpeggio (ms) </label
+      ><br />
+      <label>
+        <select id="sortBy">
+          <option value="topMidi">top note</option>
+          <option value="bottomMidi">bottom note</option>
+          <option value="midiMedian">median note</option>
+          <option value="topDegree">top degree</option>
+          <option value="bottomDegree">bottom degree</option>
+          <option value="semitoneSpread">spread</option>
+          <option value="avgSpread">average spread</option>
+          <option value="leapSemitones">leap</option>
+        </select>
+        sort by </label
+      ><br />
+      <label>
+        <select id="wavetype">
+          <option value="sine">sine</option>
+          <option value="triangle">triangle</option>
+          <option value="sawtooth">sawtooth</option>
+          <option value="square">square</option>
+          <option value="pwm">pwm</option>
+          <option value="pulse">pulse</option>
+          <option value="fmsine" selected>fmsine</option>
+          <option value="fmtriangle">fmtriangle</option>
+          <option value="fmsawtooth">fmsawtooth</option>
+          <option value="fmsquare">fmsquare</option>
+          <option value="amsine">amsine</option>
+          <option value="amtriangle">amtriangle</option>
+          <option value="amsawtooth">amsawtooth</option>
+          <option value="amsquare">amsquare</option>
+          <option value="fatsine">fatsine</option>
+          <option value="fattriangle">fattriangle</option>
+          <option value="fatsawtooth">fatsawtooth</option>
+          <option value="fatsquare">fatsquare</option>
+        </select>
+        oscillator wave
+      </label>
+      <p>
+        Hold the buttons below each voicing to play it. By "dragging" to another
+        button, you can listen how the voicings interchange.
+      </p>
+      <div id="piano"></div>
+      <p>Legend: [ degrees ] intervals | notes | spread</p>
+      <ul>
+        <li>degrees: order of steps relative to root</li>
+        <li>intervals: intervals between the notes</li>
+        <li>spread: interval between lowest and highest note</li>
+        <li>leap: semitones between largest and smallest interval</li>
+      </ul>
+    </div>
+    <script src="demo.ts"></script>
+  </body>
+</html>
