@@ -46,7 +46,7 @@ returns
 ```
 
 - see [all available chord symbols](lib/Harmony.ts#L12)
-- see [default options](lib/voicingDefaultOptions.ts)
+- see [default options](lib/defaultOptions.ts)
 
 You can pass options to the second parameter of getCominations:
 
