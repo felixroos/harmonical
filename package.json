@@ -2,7 +2,7 @@
   "name": "harmonical",
   "version": "0.1.0",
   "description": "Musical harmony lib. For voicings and chord progressions.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc",
