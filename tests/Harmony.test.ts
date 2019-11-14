@@ -1,4 +1,4 @@
-import { Harmony } from '../lib/Harmony';
+import { Harmony } from '../src/Harmony';
 import { Note } from 'tonal';
 
 test('getPitchesInRange', () => {

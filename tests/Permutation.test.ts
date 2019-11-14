@@ -1,5 +1,5 @@
-import { Permutation, PathSolver } from '../lib/Permutation';
-import { Voicing } from '../lib/Voicing';
+import { Permutation, PathSolver } from '../src/Permutation';
+import { Voicing } from '../src/Voicing';
 import { Interval } from 'tonal';
 
 test('binomial', () => {

@@ -1,9 +1,9 @@
-import { Voicing } from '../lib/Voicing';
-import { Permutation } from '../lib/Permutation';
+import { Voicing } from '../src/Voicing';
+import { Permutation } from '../src/Permutation';
 import { Chord, Note } from 'tonal';
-import { Harmony } from '../lib/Harmony';
+import { Harmony } from '../src/Harmony';
 import { Distance } from 'tonal';
-import { renderAbsoluteNotes, isInRange, getDegreeInChord, isDominantChord, findDegree } from '../lib/util';
+import { renderAbsoluteNotes, isInRange, getDegreeInChord, isDominantChord, findDegree } from '../src/util';
 
 /** NEW ALGORHYTHM */
 /* test('Voicing.search', () => {

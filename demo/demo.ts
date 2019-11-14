@@ -1,8 +1,8 @@
 import { renderPiano } from 'svg-piano';
-import { Voicing } from '../lib/Voicing';
+import { Voicing } from '../src/Voicing';
 import { Chord, Distance, Note, Interval } from 'tonal';
-import { Harmony } from '../lib/Harmony';
-import { getStepFromInterval, getDegreeFromInterval, noteArrayMidi } from '../lib/util';
+import { Harmony } from '../src/Harmony';
+import { getStepFromInterval, getDegreeFromInterval, noteArrayMidi } from '../src/util';
 import Tone from 'tone';
 
 var synth = new Tone.PolySynth(20, Tone.Synth).toMaster();

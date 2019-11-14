@@ -1,8 +1,8 @@
-import * as util from '../lib/util';
+import * as util from '../src/util';
 
 import { Scale, Chord, Interval, Distance, Note } from 'tonal';
-import { Harmony } from '../lib/Harmony';
-import { semitoneDifference } from '../lib/util';
+import { Harmony } from '../src/Harmony';
+import { semitoneDifference } from '../src/util';
 
 test('getIntervalFromStep: undefined', () => {
   expect(util.getIntervalFromStep('d3g2g3')).toEqual(undefined);

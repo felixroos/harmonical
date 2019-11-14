@@ -1,0 +1,32 @@
+export declare const voicingDefaultOptions: {
+    range: string[];
+    notes: number;
+    rangeBorders: number[];
+    maxVoices: number;
+    forceDirection: any;
+    forceBestPick: boolean;
+    maxDistance: number;
+    defaultDistances: number[];
+    minBottomDistance: number;
+    minTopDistance: number;
+    noTopDrop: boolean;
+    noTopAdd: boolean;
+    noBottomDrop: boolean;
+    noBottomAdd: boolean;
+    idleChance: number;
+    logIdle: boolean;
+    logging: boolean;
+};
+export declare const lowIntervalLimits: {
+    1: string;
+    2: string;
+    3: string;
+    4: string;
+    5: string;
+    6: string;
+    7: string;
+    8: string;
+    9: string;
+    10: string;
+    11: string;
+};

@@ -1,4 +1,4 @@
-import * as util from '../lib/util_old';
+import * as util from '../src/util_old';
 import { Note, Scale } from 'tonal';
 
 
