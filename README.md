@@ -6,6 +6,10 @@ harmonical is lib for musical _harmonic_ *cal*culation.
 - Find the best voice leading between two voicings
 - built on top of tonal.js
 
+## State
+
+This lib is still a work in progress, more features will be added.
+
 ## Demo
 
 Clone Repo and run `npm i && npm run demo`
@@ -45,8 +49,8 @@ returns
 ]
 ```
 
-- see [all available chord symbols](lib/Harmony.ts#L12)
-- see [default options](lib/defaultOptions.ts)
+- see [all available chord symbols](src/Harmony.ts#L12)
+- see [default options](src/defaultOptions.ts)
 
 You can pass options to the second parameter of getCominations:
 
